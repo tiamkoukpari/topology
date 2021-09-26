@@ -1,14 +1,190 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[symbol]{footmisc}
+\usepackage[titles]{tocloft}
+\usepackage[shortlabels]{enumitem}
 
-\title{Topology}
-\author{tiamkoukpari }
-\date{September 2021}
+\usepackage{amsmath,amssymb, MnSymbol, wasysym, varwidth, enumitem, array, caption, floatrow, wasysym, tikz, tikz-cd, graphicx, hyperref, dsfont, tabto}
+
+\renewcommand{\cftsecfont}{\normalfont\mdseries}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{[0, 1]}
+\newcommand{\h}{\simeq}
+\newcommand{\identity}{\mathds{1}}
+\newcommand{\Hom}{\textnormal{Hom}}
+\newcommand{\Ext}{\textnormal{Ext}}
+\newcommand{\Tor}{\textnormal{Tor}}
+\newcommand{\Char}{\textnormal{Char}}
+\newcommand{\im}{\textnormal{im}}
+
+\setcounter{section}{-1}
+
+\title{Hatcher's Algebraic Topology - Solutions}
+\author{Institute for Pure and Applied Mathematics (IMPA)}
+\date{Written by: Tiam Koukpari}
 
 \begin{document}
-
 \maketitle
 
-\section{Introduction}
+Trying to collect the fragmented sets of solutions into one file. Here is the sequence of requisites needed for this topic:
+\bigskip
+
+\[\begin{tikzcd}
+& \textnormal{Differential Forms (de Rham Cohomology)} \arrow[d] & \\
+& \textnormal{Analysis in } \R^{n} \subseteq \textnormal{Topology} \subseteq \textnormal{Manifolds} \arrow[rrd] \arrow[u] & \\
+\textnormal{Set Theory} \arrow[ru] \arrow[rd] & & & \textnormal{Algebraic Topology} \\
+& \textnormal{Groups} \subseteq \textnormal{Rings} \subseteq \textnormal{Fields} \arrow[r]\arrow[d] & \textnormal{Linear Algebra} \arrow[ru] & \\
+& \textnormal{Homological Algebra \& Categories} \arrow[u]
+\end{tikzcd}\]
+\bigskip
+\bigskip
+
+If you find any mistakes, please email \href{mailto:tiam.koukpari@impa.br}{tiam.koukpari@impa.br}.
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Some Underlying Geometric Notions}
+\newpage
+
+\section{The Fundamental Group}
+
+\subsection{Basic Constructions}
+
+\subsection{Van Kampen's Theorem}
+
+\subsection{Covering Spaces}
+
+\subsection*{Additional Topics}
+\addcontentsline{toc}{section}{\protect\numberline{}Additional Topics}
+
+\subsubsection*{1.A. Graphs and Free Groups}
+\addcontentsline{toc}{subsection}{\protect\numberline{}1.A. Graphs and Free Groups}
+
+\subsubsection*{1.B. K(G,1) Spaces and Graphs of Groups}
+\addcontentsline{toc}{subsection}{\protect\numberline{}1.B. K(G,1) Spaces and Graphs of Groups}
+
+\newpage
+
+\section{Homology}
+
+\subsection{Simplicial and Singular Homology}
+
+\subsection{Computations and Applications}
+
+\subsection{The Formal Viewpoint}
+
+\subsection*{Additional Topics}
+\addcontentsline{toc}{section}{\protect\numberline{}Additional Topics}
+
+\subsubsection*{2.A. Homology and Fundamental Group}
+\addcontentsline{toc}{subsection}{\protect\numberline{}2.A. Homology and Fundamental Group}
+
+\subsubsection*{2.B. Classical Applications}
+\addcontentsline{toc}{subsection}{\protect\numberline{}2.B. Classical Applications}
+
+\subsubsection*{2.C. Simplicial Approximation}
+\addcontentsline{toc}{subsection}{\protect\numberline{}2.C. Simplicial Approximation}
+
+\newpage
+
+\section{Cohomology}
+
+\subsection{Cohomology Groups}
+
+\subsection{Cup Product}
+
+\subsection{Poincaré Duality}
+
+\subsection*{Additional Topics}
+\addcontentsline{toc}{section}{\protect\numberline{}Additional Topics}
+
+\subsubsection*{3.A. Universal Coefficients for Homology}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.A. Universal Coefficients for Homology}
+
+\subsubsection*{3.B. The General Künneth Formula}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.B. The General Künneth Formula}
+
+\subsubsection*{3.C. H–Spaces and Hopf Algebras}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.C. H–Spaces and Hopf Algebras}
+
+\subsubsection*{3.D. The Cohomology of SO(n)}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.D. The Cohomology of SO(n)}
+
+\subsubsection*{3.E. Bockstein Homomorphisms}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.E. Bockstein Homomorphisms}
+
+\subsubsection*{3.F. Limits and Ext}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.F. Limits and Ext}
+
+\subsubsection*{3.G. Transfer Homomorphisms}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.G. Transfer Homomorphisms}
+
+\subsubsection*{3.H. Local Coefficients}
+\addcontentsline{toc}{subsection}{\protect\numberline{}3.H. Local Coefficients}
+
+\newpage
+
+\section{Homotopy Theory}
+
+\subsection{Homotopy Groups}
+
+\subsection{Elementary Methods of Calculation}
+
+\subsection{Connections with Cohomology}
+
+\subsection*{Additional Topics}
+\addcontentsline{toc}{section}{\protect\numberline{}Additional Topics}
+
+\subsubsection*{4.A. Basepoints and Homotopy}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.A. Basepoints and Homotopy}
+
+\subsubsection*{4.B. The Hopf Invariant}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.B. The Hopf Invariant}
+
+\subsubsection*{4.C. Minimal Cell Structures}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.C. Minimal Cell Structures}
+
+\subsubsection*{4.D. Cohomology of Fiber Bundles}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.D. Cohomology of Fiber Bundles}
+
+\subsubsection*{4.E. The Brown Representability Theorem}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.E. The Brown Representability Theorem}
+
+\subsubsection*{4.F. Spectra and Homology Theories}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.F. Spectra and Homology Theories}
+
+\subsubsection*{4.G. Gluing Constructions}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.G. Gluing Constructions}
+
+\subsubsection*{4.H. Eckmann-Hilton Duality}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.H. Eckmann-Hilton Duality}
+
+\subsubsection*{4.I. Stable Splittings of Spaces}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.I. Stable Splittings of Spaces}
+
+\subsubsection*{4.J. The Loopspace of a Suspension}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.J. The Loopspace of a Suspension}
+
+\subsubsection*{4.K. The Dold-Thom Theorem}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.K. The Dold-Thom Theorem}
+
+\subsubsection*{4.L. Steenrod Squares and Powers}
+\addcontentsline{toc}{subsection}{\protect\numberline{}4.L. Steenrod Squares and Powers}
 
 \end{document}
