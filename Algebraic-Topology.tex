@@ -64,7 +64,27 @@ If you find any mistakes, please email \href{mailto:tiam.koukpari@impa.br}{tiam.
 \tab\textbf{1}. Construct an explicit deformation retraction of the torus with one point deleted onto a graph consisting of two circles intersecting in a point, namely, longitude and meridian circles of the torus.
 \medskip
 
-\textbf{Solution}. $\blacksquare$
+\textbf{Solution}. It is useful to visualize the torus with
+\usetikzlibrary{decorations.markings,positioning}
+
+\[\begin{tikzpicture}[node distance=2cm]
+\coordinate (top-right) {};
+\coordinate[left=of top-right] (top-left) {};
+\coordinate[below=of top-right] (bottom-left) {};
+\coordinate[below=of top-left] (bottom-right) {};
+\begin{scope}[decoration={markings, mark=at position 0.5 with {\arrow{<}}}]
+\draw[postaction={decorate}] (top-right) -- node[auto,swap] {$v$} (top-left);
+\draw[postaction={decorate}] (bottom-right) -- node[auto] {$w$} (top-left);
+\end{scope}
+\begin{scope}[decoration={markings, mark=at position 0.5 with {\arrow{>}}}]
+\draw[postaction={decorate}] (bottom-right) -- node[auto,swap] {$v$} (bottom-left);
+\draw[postaction={decorate}] (top-right) -- node[auto] {$w$} (bottom-left);
+\end{scope}
+\end{tikzpicture}\]
+
+To form a torus from the above, fold the shape to connect $v$ with itself, creating two copies of $S^{1}$ on $w$. Then fold the shape to connect $w$ with itself, joining the two copies of $S^{1}$ on $w$ and creating another $S^{1}$ on $v$...
+
+$\blacksquare$
 \bigskip
 \bigskip
 
@@ -75,7 +95,7 @@ If you find any mistakes, please email \href{mailto:tiam.koukpari@impa.br}{tiam.
 
 $$f_{t}(\mathbf{x}) = (1-t)\mathbf{x} + t\frac{\mathbf{x}}{|\mathbf{x}|}.$$
 
-Then $f_{0}(\mathbf{x}) = \mathbf{x}$, $f_{1} = \mathbf{x}/|\mathbf{x}|$, and $f_{t}|S^{n-1} = \identity$. The function is a straight, continuous line from $\mathbf{x}$ to a normalized $\mathbf{x}$, i.e. on the $(n-1)$-sphere. The function is continuous since $\{0\}$ is not in its domain. $\blacksquare$
+Then $f_{0}(\mathbf{x}) = \mathbf{x}$ so that $f_{0} = \identity$, $f_{1}(\mathbf{x}) = \mathbf{x}/|\mathbf{x}|$ so that $f_{1} = S^{n-1}$, and $f_{t}|S^{n-1} = \identity$. The function is a straight, continuous line from $\mathbf{x}$ to a normalized $\mathbf{x}$, i.e. on the $(n-1)$-sphere. The function is continuous since $\{0\}$ is not in its domain. $\blacksquare$
 \bigskip
 \bigskip
 
