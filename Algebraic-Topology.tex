@@ -82,7 +82,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 \textbf{Chapter 2}:
 \medskip
 
-1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
+1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10, 1.12, 1.13, 1.14, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.20, 2.21, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.32, 2.33, 2.34, 2.35, 2.36, 2.37, 2.38, 2.39, 2.40, 2.41, 2.42, 2.43
 
@@ -335,14 +335,42 @@ References: \href{https://riemannianhunger.wordpress.com/solutions-to-algebraic-
 \textbf{11}. Show that if $A$ is a retract of $X$ then the map $H_{n}(A)\to H_{n}(X)$ induced by the inclusion $A\subset X$ is injective.
 \medskip
 
-\textbf{Solution}. $\blacksquare$
+\textbf{Solution}. By the long exact sequence of a pair $(X, A)$, we have
+
+$$\cdots \to H_{n}(A)\xrightarrow{i_{\ast}} H_{n}(X)\xrightarrow{j_{\ast}}H_{n}(X, A)\xrightarrow{\partial} H_{n-1}(A)\xrightarrow{i_{\ast}} H_{n-1}(X)\to \cdots \to H_{0}(X, A)\to 0.$$
+
+Since $A$ is a retract of $X$, $H_{i}(X, A) = 0$ for all $i$ and the above reduces to
+
+$$\cdots \to H_{n}(A)\xrightarrow{i_{\ast}} H_{n}(X)\xrightarrow{j_{\ast}}0\xrightarrow{\partial} H_{n-1}(A)\xrightarrow{i_{\ast}} H_{n-1}(X)\to \cdots \to H_{0}(X)\to 0.$$
+
+Since $0\to A\xrightarrow{\alpha} B$ is exact iff $\ker \alpha = 0$, and the above sequence is exact, we conclude that $\ker i_{\ast} = 0$ and $i_{\ast}$ is injective. $\blacksquare$
 \bigskip
 \bigskip
 
 \textbf{15}. For an exact sequence $A\to B\to C\to D\to E$ show that $C = 0$ iff the map $A\to B$ is surjective and $D\to E$ is injective. Hence for a pair of spaces $(X, A)$, the inclusion $A\hookrightarrow X$ induces isomorphisms on all homology groups iff $H_{n}(X, A) = 0$ for all $n$.
 \medskip
 
-\textbf{Solution}. $\blacksquare$
+\textbf{Solution}. We first label the above sequence:
+
+$$A\xrightarrow{\alpha} B\xrightarrow{\beta} C\xrightarrow{\gamma} D\xrightarrow{\delta} E.$$
+
+If $C = 0$, then $\ker \beta = B$ and since the sequence is exact, $\im \alpha = \ker \beta = B$. So $\alpha: A\to B$ is surjective. We also have $0 = \im \gamma = \ker \delta$ so that $\delta:D\to E$ is injective. Conversely, if $\alpha: A\to B$ is surjective, then $B = \im \alpha = \ker \beta$ so that $\beta = 0$ and the above sequence reduces to
+
+$$A\xrightarrow{\alpha} B\xrightarrow{\beta} 0\to C\xrightarrow{\gamma} D\xrightarrow{\delta} E.$$
+
+Similarly, if $\delta: D\to E$ is injective, then $\im \gamma = \ker \delta = 0$ and the above sequence reduces to
+
+$$A\xrightarrow{\alpha} B\xrightarrow{\beta} 0\to C\to 0\xrightarrow{\gamma} D\xrightarrow{\delta} E.$$
+
+Hence $C = 0$. The implication being for long exact sequences
+
+$$\cdots \to H_{n}(A)\xrightarrow{i_{\ast}} H_{n}(X)\xrightarrow{j_{\ast}}H_{n}(X, A)\xrightarrow{\partial} H_{n-1}(A)\xrightarrow{i_{\ast}} H_{n-1}(X)\to \cdots \to H_{0}(X, A)\to 0$$
+
+with $H_{n}(X, A) = 0$. At each dimension, the above sequence reduces to
+
+$$\cdots\to  0\to H_{n}(A)\xrightarrow{i_{\ast}} H_{n}(X)\to 0\to \cdots $$
+
+implying that the inclusion $i: A\hookrightarrow X$ induces isomorphisms $H_{n}(A)\cong H_{n}(X)$. $\blacksquare$
 \bigskip
 \bigskip
 
