@@ -341,6 +341,13 @@ References: \href{https://riemannianhunger.wordpress.com/solutions-to-algebraic-
 \bigskip
 \bigskip
 
+\textbf{3}. Construct a $\Delta$-complex structure on $\R P^{n}$ as a quotient of a $\Delta$-complex structure on $S^{n}$ having vertices the two vectors of length along each coordinate axis in $\R^{n+1}$.
+\medskip
+
+\textbf{Solution}. $\blacksquare$
+\bigskip
+\bigskip
+
 \textbf{4}. Compute the simplicial homology groups of the triangular parachute obtained from $\Delta^{2}$ by identifying its three vertices to a single point.
 \medskip
 
@@ -372,6 +379,31 @@ $$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle
 
 For $k\geq 2$, $H_{k}^{\Delta} = 0$. $\blacksquare$
 \bigskip
+\bigskip
+
+\textbf{6}. Compute the simplicial homology groups of the $\Delta$-complex obtained from $n+1$ 2-simplices $\Delta_{0}^{2},\ldots, \Delta_{n}^{2}$ by identifying all three edges of $\Delta_{0}^{2}$ to a single edge, and for $i > 0$ identifying the edges $[v_{0}, v_{1}]$ and $[v_{1}, v_{2}]$ of $\Delta_{i}^{2}$ to a single edge and the edge $[v_{0}, v_{2}]$ to the edge $[v_{0}, v_{1}]$ of $\Delta_{i-1}^{2}$.
+\medskip
+
+\textbf{Solution}. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{7}. Find a way of identifying pairs of faces of $\Delta^{3}$ to produce a $\Delta$-complex structure on $S^{3}$ having a single 3-simplex, and compute the simplicial homology groups of this $\Delta$-complex.
+\medskip
+
+\textbf{Solution}. Identify any two faces together, then identify the remaining two faces together. For example, identify 123 with 023, and 012 with 013. The construction is a single 3-simplex 0123, two 2-simplices $123 = 023$ and $012 = 013$, three 1-simplices $02 = 03 = 12 = 13$, 01 and 23, and two 0-simplices $0 = 1$ and $2 = 3$.
+\medskip
+
+We can easily compute $\partial_{3}(0123) = 0$. Next we compute the lower-dimensional boundaries:
+
+$$\partial_{2} (123) = \partial_{2} (023) = (23)-(03)+(02) = (23),\quad \partial_{2} (012) = \partial_{2} (013) = (13)-(03)+(01) = (01)$$
+$$\partial_{1}(02) = \partial_{1}(03) = \partial_{1}(12) = \partial_{1}(13) = (1) - (3),\quad \partial_{1}(01) = 0,\quad \partial_{1}(23) = 0$$
+$$\partial_{0}(0) = \partial_{0}(1) = 0,\quad \partial_{0}(2) = \partial_{0}(3) = 0.$$
+
+The simplicial homology groups are then
+
+$$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle (0), (2)\rangle}{\langle (1)-(3), 0, 0\rangle} = \Z,\quad H^{\Delta}_{1} = \frac{\ker (\partial_{1})}{\im(\partial_{2})} = 0 = \frac{\ker (\partial_{2})}{\im(\partial_{3})} = H^{\Delta}_{2}$$
+$$\quad H^{\Delta}_{3} = \frac{\ker (\partial_{3})}{\im(\partial_{4})} = \frac{\langle (0123)\rangle}{0} = \Z.\quad \blacksquare$$
 \bigskip
 
 \textbf{9}. Compute the homology groups of the $\Delta$-complex $X$ obtained from $\Delta^{n}$ by identifying all faces of the same dimension. Thus $X$ has a single $k$ simplex for each $k\leq n$.
