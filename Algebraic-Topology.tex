@@ -82,7 +82,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 \textbf{Chapter 2}:
 \medskip
 
-1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
+1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.16, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
 2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
@@ -357,7 +357,7 @@ $$\partial U_{2} = b - c + a,\quad \partial_{1} a = \partial_{1} b = \partial_{1
 
 The first two homology groups are then given by
 
-$$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle v\rangle}{0} = \mathbb{Z},\quad H^{\Delta}_{1} = \frac{\ker (\partial_{1})}{\im(\partial_{2})} = \frac{\langle a, b, c\rangle}{\langle b-c+a\rangle} = \frac{\langle a, b, b-c+a\rangle}{\langle b-c+a\rangle} = \langle a, b\rangle = \mathbb{Z}^{2}.$$
+$$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle v\rangle}{0} = \Z,\quad H^{\Delta}_{1} = \frac{\ker (\partial_{1})}{\im(\partial_{2})} = \frac{\langle a, b, c\rangle}{\langle b-c+a\rangle} = \frac{\langle a, b, b-c+a\rangle}{\langle b-c+a\rangle} = \langle a, b\rangle = \Z^{2}.$$
 
 For $k\geq 2$, $H_{k}^{\Delta} = 0$. $\blacksquare$
 \medskip
@@ -375,7 +375,7 @@ $$\partial_{2} U = a + b - c,\quad \partial_{2} L = a - b + c,\quad \partial_{1}
 
 The first two homology groups are then given by
 
-$$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle v\rangle}{0} = \mathbb{Z},\quad H^{\Delta}_{1} = \frac{\ker (\partial_{1})}{\im(\partial_{2})} = \frac{\langle a, b, c\rangle}{\langle a+b-c, a-b+c\rangle} = \frac{\langle a, b, c\rangle}{\langle a + b - (b - a), c\rangle} = \frac{\langle a, b\rangle}{\langle 2a\rangle} = \mathbb{Z}_{2}\oplus \mathbb{Z}.$$
+$$H^{\Delta}_{0} = \frac{\ker (\partial_{0})}{\im(\partial_{1})} = \frac{\langle v\rangle}{0} = \Z,\quad H^{\Delta}_{1} = \frac{\ker (\partial_{1})}{\im(\partial_{2})} = \frac{\langle a, b, c\rangle}{\langle a+b-c, a-b+c\rangle} = \frac{\langle a, b, c\rangle}{\langle a + b - (b - a), c\rangle} = \frac{\langle a, b\rangle}{\langle 2a\rangle} = \Z_{2}\oplus \Z.$$
 
 For $k\geq 2$, $H_{k}^{\Delta} = 0$. $\blacksquare$
 \bigskip
@@ -463,6 +463,25 @@ implying that the inclusion $i: A\hookrightarrow X$ induces isomorphisms $H_{n}(
 \bigskip
 \bigskip
 
+\textbf{19}. Compute the homology groups of the subspace of $I\times I$ consisting of the four boundary edges plus all points in the interior whose first coordinate is rational.
+\medskip
+
+\textbf{Solution}. Let $X$ denote this space. Since $X$ is path-connected, $H_{0}(X) = \Z$. Since there are no 2-cells, $H_{n}(X) = 0$ for all $n\geq 2$. We can describe this space as $X = \{(x, y)\in I\times I: x\in \Q\}\cup \{(x, y)\in I\times I: y\in \{0, 1\}\}$. Take two subspaces $A = \{(x, y)\in X: y < 3/4\}$ and $B = \{(x, y)\in X: y > 1/4\}$. These spaces retract to $y = 0$ and $y = 1$, respectively, so that they are both contractible. Their intersection is
+
+$$A\cap B = \{(x, y)\in X: y\in (1/4, 3/4)\}\cong I\cap \Q$$
+
+so that $H_{0}(A\cap B) = \Z^{|\Q|}$. Using the Mayer-Vietoris sequence on reduced homology, we have
+
+$$0\to \tilde{H}_{1}(X)\to \tilde{H}_{0}(A\cap B)\to \tilde{H}_{0}(A)\oplus \tilde{H}_{0}(B)\to \tilde{H}_{0}(X)\to 0.$$
+
+Since $A$ and $B$ are contractible, this becomes
+
+$$0\to \tilde{H}_{1}(X)\to \tilde{H}_{0}(A\cap B)\to  0$$
+
+so that $H_{1}(X) = \tilde{H}_{1}(X) = \tilde{H}_{0}(A\cap B) = \Z^{|\Q|-1} = \Z^{|\Q|}$. $\blacksquare$
+\bigskip
+\bigskip
+
 \textbf{25}. Find an explicit, noninductive formula for the barycentric subdivision operator $S:C_{n}(X)\to C_{n}(X)$.
 \medskip
 
@@ -485,6 +504,21 @@ And now we can see a clear pattern where at each iteration, we add the barycente
 $$B(\sigma_{n}) := \sum_{\pi \in S_{n+1}} \textnormal{sign}(\pi) \left[\frac{\sum_{i=0}^{n} v_{i}}{n+1}, \frac{\sum_{i=0}^{n-1} v^{\pi}_{i}}{n}, \ldots, \frac{\sum_{0}^{1} v^{\pi}_{i}}{1}, v^{\pi}_{0}\right]$$
 
 where $S_{n}$ is the permutation group of $n$ vertices, $\textnormal{sign}(\pi)$ is the orientation of each permutation $\pi$, and where it applies, $v^{\pi}$ means the vertices that belong to the $(n-1)$-simplex of the $\pi$-th permutation. Note that in each element, we are summing over the $i$-th vertex of a permutation, and not the $i$-th index of $\sigma_{n}$. For example, in the last element, $v^{\pi}_{0}$ means the 0-th element of the $\pi$-th permutation, which could mean $v_{0}$, $v_{1}$, $v_{2}$, and so on. It does not strictly mean $v_{0}$. This is exemplified in our example for $n = 2$. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{29}. Show that $S^{1}\times S^{1}$ and $S^{1}\vee S^{1}\vee S^{2}$ have isomorphic homology groups in all dimensions, but their universal covering spaces do not.
+\medskip
+
+\textbf{Solution}. The homology groups are
+
+\[H_{n}(S^{1}\times S^{1}) = \begin{cases} \Z^{2} & \textnormal{for } n=1\\ \Z & \textnormal{for } n = 0, 2\\
+0 & \textnormal{for } n\geq3 \end{cases} = H_{n}(S^{1})\oplus H_{n}(S^{1})\oplus H_{n}(S^{2}) = H_{n}(S^{1}\vee S^{1}\vee S^{2}).\]
+
+So $H_{n}(S^{1}\times S^{1}) = H_{n}(S^{1}\vee S^{1}\vee S^{2})$. The universal covering space of $S^{1}\times S^{1}$ is $\R^{2}$, which is contractible with homology groups $H_{n}(\R^{2}) = 0$ for all $n\neq 0$. The universal covering space of $S^{1}\vee S^{1}\vee S^{2}$ is the covering of $S^{1}\vee S^{1}$ with $S^{2}$ attached at each vertex.
+\medskip
+
+Incomplete...
 \bigskip
 \bigskip
 
@@ -863,7 +897,7 @@ so that $H^{i} = \Ext(\Z_{m},\Z_{p}) = \Z_{p}$ since $\textnormal{gcd}(p, m) = p
 
 \subsection{Poincaré Duality}
 
-\tab\textbf{3.3.16}. Show that $(\alpha\frown \varphi)\frown \psi = \alpha \frown (\varphi\smile \psi)$ for all $\alpha\in C_{k}(X;R)$, $\varphi\in C^{l}(X; R)$, and $\psi\in C^{m}(X;R)$. Deduce that cap product makes $H_{\ast}(X;R)$ a right $H^{\ast}(X;R)$-module.
+\tab\textbf{16}. Show that $(\alpha\frown \varphi)\frown \psi = \alpha \frown (\varphi\smile \psi)$ for all $\alpha\in C_{k}(X;R)$, $\varphi\in C^{l}(X; R)$, and $\psi\in C^{m}(X;R)$. Deduce that cap product makes $H_{\ast}(X;R)$ a right $H^{\ast}(X;R)$-module.
 \medskip
 
 \textbf{Solution}. On the right, we have
