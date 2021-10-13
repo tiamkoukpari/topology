@@ -84,7 +84,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 
 1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
-2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
+2.2, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
 3.1, 3.2, 3.3, 3.4
 
@@ -567,7 +567,11 @@ References: \href{https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem}{1},
 \textbf{Solution}. If $f$ did not have any fixed points, then by degree property (g) (Page 134) $\deg f = (-1)^{n+1}$. So $f$ must have a fixed point $x$ such that $f(x) = x$. Let $-\identity$ be the antipodal map. Then by degree property (d) $f\circ (-\identity) = -f$ has degree 0. So $-f$ must have a fixed point $y$ such that $-f(y) = y$.
 \medskip
 
-Incomplete...
+Since $F(x)\neq 0$, we have a well-defined normalised $\hat{F} = F/||F||\subseteq S^{n-1}$. Next define the degree 0 map (since the first map in the composition is not surjective)
+
+$$G: S^{n-1}\hookrightarrow D^{n}\xrightarrow{\hat{F}} S^{n-1}.$$
+
+By the first part, $\exists x, y$ such that $G(x) = x$ and $G(y) = -y$. Since the first map in the composition of $G$ is the inclusion map, we have $\hat{F}(x) = x$ and $\hat{F}(y) = -y$. In the original map, $F(x)$ is parallel and in the same direction as $x$, and $F(y)$ is parallel and in the opposite direction as $y$. I.e. $F(x)$ points radially outward and $F(y)$ points radially inward. $\blacksquare$
 \medskip
 
 References: \href{https://pages.uoregon.edu/njp/635hw4solutions.pdf}{1}.
