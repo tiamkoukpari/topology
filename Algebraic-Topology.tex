@@ -549,6 +549,24 @@ Incomplete...
 \bigskip
 \bigskip
 
+\textbf{31}. Using the notation of the five-lemma, give an example where the maps $\alpha, \beta, \delta$, and $\epsilon$ are zero but $\gamma$ is nonzero. This can be done with the short exact sequences in which all the groups are either $\Z$ or 0.
+\medskip
+
+\textbf{Solution}. We use the same construction as in the reference:
+
+\[\begin{tikzcd}
+0 \arrow{r}\arrow{d}{\alpha = 0} & 0 \arrow{r}\arrow{d}{\beta = 0} & \Z \arrow{r}{\identity_{\ast}}\arrow{d}{\gamma = \identity_{\ast}} & \Z \arrow{r}\arrow{d}{\delta = 0} & 0 \arrow{d}{\epsilon = 0}\\
+0 \arrow{r} & \Z \arrow{r}{\identity_{\ast}} & \Z \arrow{r} & 0 \arrow{r} & 0
+\end{tikzcd}.\]
+\medskip
+
+Since $0\to \Z\to \Z\to 0$ is exact, both rows are exact. Commutativity of the squares can be checked easily. $\blacksquare$
+\medskip
+
+References: \href{https://cemulate.github.io/solutions_hatcher/e2-1-31.html}{1}.
+\bigskip
+\bigskip
+
 \subsection{Computations and Applications}
 
 \tab\textbf{1}. Prove the Brouwer fixed point theorem for maps $f:D^{n}\to D^{n}$ by applying degree theory to the map $S^{n}\to S^{n}$ that sends both the northern and southern hemispheres of $S^{n}$ to the southern hemisphere via $f$. [This was Brouwer's original proof.]
