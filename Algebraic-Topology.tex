@@ -100,7 +100,7 @@ C.1, C.2, C.3, C.4, C.5, C.6, C.7, C.8, C.9
 
 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18
 
-3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14, 3.15, 3.16, 3.17, 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25, 3.26, 3.27, 3.28, 3.29, 3.30, 3.31, 3.32, 3.33, 3.34, 3.35
+3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14, 3.15, 3.17, 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25, 3.26, 3.27, 3.28, 3.29, 3.30, 3.31, 3.32, 3.33, 3.34, 3.35
 
 A.1, A.2, A.3, A.4, A.5, A.6
 
@@ -862,6 +862,39 @@ so that $H^{i} = \Ext(\Z_{m},\Z_{p}) = \Z_{p}$ since $\textnormal{gcd}(p, m) = p
 \subsection{Cup Product}
 
 \subsection{Poincaré Duality}
+
+\tab\textbf{3.3.16}. Show that $(\alpha\frown \varphi)\frown \psi = \alpha \frown (\varphi\smile \psi)$ for all $\alpha\in C_{k}(X;R)$, $\varphi\in C^{l}(X; R)$, and $\psi\in C^{m}(X;R)$. Deduce that cap product makes $H_{\ast}(X;R)$ a right $H^{\ast}(X;R)$-module.
+\medskip
+
+\textbf{Solution}. On the right, we have
+
+$$\alpha\frown(\varphi\smile \psi) = (\varphi\smile \psi)(\alpha|_{[v_{0},\ldots,v_{\ell+m}]})\cdot \alpha|_{[v_{\ell+m},\ldots, v_{k}]}$$
+$$=\varphi\left((\alpha|_{[v_{0},\ldots,v_{\ell+m}]})|_{[v_{0},\ldots,v_{\ell}]}\right)\cdot \psi\left((\alpha|_{[v_{0},\ldots,v_{\ell+m}]})|_{[v_{\ell},\ldots,v_{m}]}\right)\cdot \alpha|_{[v_{\ell+m},\ldots, v_{k}]}$$
+$$=\varphi(\alpha|_{[v_{0},\ldots,v_{\ell}]})\cdot \psi(\alpha|_{[v_{\ell},\ldots,v_{\ell+m}]})\cdot \alpha|_{[v_{\ell+m},\ldots, v_{k}]}$$
+
+where the final result is an element in $C_{k}\frown (C^{\ell}\smile C^{m})\to C_{k}\frown C^{\ell+m}\to C_{k-(\ell+m)} = C_{k-\ell-m}$. On the left, we have
+
+$$(\alpha\frown\varphi)\frown \psi = \varphi(\alpha|_{[v_{0},\ldots,v_{\ell}]})\cdot \alpha|_{[v_{\ell},\ldots,v_{k}]} \frown \psi$$
+$$= \varphi(\alpha|_{[v_{0},\ldots, v_{\ell}]})\cdot \psi\left((\alpha|_{[v_{\ell},\ldots,v_{k}]})|_{[v_{0},\ldots, v_{m}]}\right)\cdot (\alpha|_{[v_{\ell},\ldots,v_{k}]})|_{[v_{m},\ldots,v_{k-\ell}]}$$
+$$= \varphi(\alpha|_{[v_{0},\ldots, v_{\ell}]})\cdot \psi(\alpha|_{[v_{\ell},\ldots,v_{\ell+m}]})\cdot \alpha|_{[v_{\ell+m},\ldots,v_{k}]}$$
+
+where the final result is an element in $(C_{k}\frown C^{\ell})\frown C^{m}\to C_{k-\ell}\frown C^{m}\to C_{k-\ell-m}$. So both sides are the same and equality holds. Note that $(\alpha|_{[v_{\ell},\ldots,v_{k}]})|_{[v_{0},\ldots, v_{m}]} = \alpha|_{[v_{\ell},\ldots,v_{\ell+m}]}$ since we are taking $m - 0 = m$ vertices from $\ell$ to $k$. And similarly, $(\alpha|_{[v_{\ell},\ldots,v_{k}]})|_{[v_{m},\ldots,v_{k-\ell}]} = \alpha|_{[v_{\ell+m},\ldots,v_{k}]}$ since we are taking $k - (\ell + m)$ vertices.
+\medskip
+
+Now we show that cap product makes $H_{\ast}(X; R)$ a right $H^{\ast}(X; R)$-module (see reference for conditions). First, for $m_{1}, m_{2}\in H_{\ast}(X;R)$ and $r\in H^{\ast}(X; R)$, we have
+
+$$(m_{1}+m_{2})\frown r = r\frown m_{1} + r\frown m_{2}$$
+
+because $\frown$ is an $R$-bilinear homomorphism. Next, for $m\in H_{\ast}(X; R)$ and $r_{1}, r_{2}\in H^{\ast}(X;R)$, we have
+
+$$m\frown (r_{1} + r_{2}) = (r_{1} + r_{2})(m)\cdot m = r_{1}(m)\cdot m + r_{2}(m)\cdot m = m\frown r_{1} + m\frown r_{2}.$$
+
+The final two conditions are the identity $m\frown \mathds{1} = \mathds{1}(m)\cdot m = m$ and associativity, which was proven in the first part of this exercise. So $\frown$ makes $H_{\ast}(X; R)$ a right $H^{\ast}(X; R)$-module. $\blacksquare$
+\medskip
+
+References: \href{https://math.stackexchange.com/questions/144518/what-exactly-is-an-r-module}{1}.
+\bigskip
+\bigskip
 
 \subsection*{Additional Topics}
 \addcontentsline{toc}{section}{\protect\numberline{}Additional Topics}
