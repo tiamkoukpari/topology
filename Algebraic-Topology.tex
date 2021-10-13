@@ -84,7 +84,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 
 1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
-2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
+2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
 3.1, 3.2, 3.3, 3.4
 
@@ -490,7 +490,44 @@ where $S_{n}$ is the permutation group of $n$ vertices, $\textnormal{sign}(\pi)$
 
 \subsection{Computations and Applications}
 
-\tab\textbf{20}. For finite CW complexes $X$ and $Y$, show that $\chi(X\times Y) = \chi(X)\chi(Y)$.
+\tab\textbf{1}. Prove the Brouwer fixed point theorem for maps $f:D^{n}\to D^{n}$ by applying degree theory to the map $S^{n}\to S^{n}$ that sends both the northern and southern hemispheres of $S^{n}$ to the southern hemisphere via $f$. [This was Brouwer's original proof.]
+\medskip
+
+\textbf{Solution}. Recall Brouwer's fixed point theorem states that for any continuous function $f$ mapping a compact convex set to itself, there is a point $x_{0}$ such that $f(x_{0}) = x_{0}$. Let $g: S^{n}\to S^{n}$ be the map described in the exercise. Since $g$ is not surjective, by degree property (b) (Page 134) $\deg g = 0$. If $g$ did not have any fixed points, then by degree property (g) $\deg g = (-1)^{n+1}$. So $g$ must have a fixed point, and it must be on the southern hemisphere of $S^{n}$. Any continuous map $f:D^{n}\to D^{n}$ can be described as the restriction to the southern hemisphere of some $g: S^{n}\to S^{n}$  That is, the fixed point of $g$ is the fixed point of $f$. $\blacksquare$
+\medskip
+
+References: \href{https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem}{1}, \href{https://pages.uoregon.edu/njp/635hw4solutions.pdf}{2}.
+\bigskip
+\bigskip
+
+\textbf{3}. Let $f:S^{n}\to S^{n}$ be a map of degree zero. Show that there exist points $x, y\in S^{n}$ with $f(x) = x$ and $f(y) = -y$. Use this to show that if $F$ is a continuous vector field defined on the unit ball $D^{n}$ in $\R^{n}$ such that $F(x)\neq 0$ for all $x$, then there exists a point on $\partial D^{n}$ where $F$ points radially outward and another point on $\partial D^{n}$ where $F$ points radially inward.
+\medskip
+
+\textbf{Solution}. If $f$ did not have any fixed points, then by degree property (g) (Page 134) $\deg f = (-1)^{n+1}$. So $f$ must have a fixed point $x$ such that $f(x) = x$. Let $-\identity$ be the antipodal map. Then by degree property (d) $f\circ (-\identity) = -f$ has degree 0. So $-f$ must have a fixed point $y$ such that $-f(y) = y$.
+\medskip
+
+Incomplete...
+\medskip
+
+References: \href{https://pages.uoregon.edu/njp/635hw4solutions.pdf}{1}.
+\bigskip
+\bigskip
+
+\textbf{4}. Construct a surjective map $S^{n}\to S^{n}$ of degree zero, for each $n\geq 1$.
+\medskip
+
+\textbf{Solution}. Construct $f$ as the surjective map $h\circ g$ where $g: S^{n}\to D^{n}$ is the vertical projection and $h: D^{n}\to S^{n}$ is the quotient map, collapsing the border to a single point. Recall that the degree of $f$ is $d$ such that $f_{\ast}(\alpha) = d\alpha$ where $f_{\ast}: H_{n}(S^{n})\to H_{n}(S^{n})$. In our construction,
+
+$$f_{\ast} = h_{\ast}\circ g_{\ast}: H_{n}(S^{n})\to H_{n}(D^{n}) = 0\to H_{n}(S^{n}).$$
+
+Since $f_{\ast}$ passes through 0, it has degree zero. $\blacksquare$
+\medskip
+
+References: \href{https://pages.uoregon.edu/njp/635hw4solutions.pdf}{1}.
+\bigskip
+\bigskip
+
+\textbf{20}. For finite CW complexes $X$ and $Y$, show that $\chi(X\times Y) = \chi(X)\chi(Y)$.
 \medskip
 
 \textbf{Solution}. The Euler characteristic $\chi(X)$ is defined by $\sum_{n}(-1)^{n}c_{n}(X)$ where $c_{n}(X)$ is the number of $n$-cells in $X$. The $n$-cells in $X\times Y$ are the products of $i$-cells in $X$ and $j$-cells in $Y$ such that $i+j = n$. So
