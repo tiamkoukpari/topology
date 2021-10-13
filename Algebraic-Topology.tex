@@ -82,7 +82,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 \textbf{Chapter 2}:
 \medskip
 
-1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.16, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
+1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
 2.2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
@@ -460,6 +460,33 @@ with $H_{n}(X, A) = 0$. At each dimension, the above sequence reduces to
 $$\cdots\to  0\to H_{n}(A)\xrightarrow{i_{\ast}} H_{n}(X)\to 0\to \cdots $$
 
 implying that the inclusion $i: A\hookrightarrow X$ induces isomorphisms $H_{n}(A)\cong H_{n}(X)$. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{16 (a)}. Show that $H_{0}(X, A) = 0$ iff $A$ meets each path-connected component of $X$.
+\medskip
+
+\textbf{Solution}. We have the long exact sequence
+
+$$\cdots \to H_{1}(X, A)\to H_{0}(A)\xrightarrow{f_{\ast}} H_{0}(X) = \oplus_{i\in I} \Z\to H_{0}(X, A)\to 0$$
+
+where $I$ the set of path-components of $X$. If $H_{0}(X, A) = 0$, then $f_{\ast}$ is surjective and the number of path components in $A$ is the same as in $X$. Since $A\subset X$, $A$ meets each path-connected component of $X$. 
+\medskip
+
+Conversely, if $A$ meets each path component of $X$, then $f_{\ast} = \identity_{\ast}$ is surjective and $H_{0}(X, A) = 0$. $\square$
+\medskip
+
+\textbf{(b)} Show that $H_{1}(X, A) = 0$ iff $H_{1}(A)\to H_{1}(X)$ is surjective and each path-component of $X$ contains at most one path-component of $A$.
+\medskip
+
+\textbf{Solution}. We have the long exact sequence
+
+$$\cdots \to H_{1}(A)\xrightarrow{g_{\ast}} H_{1}(X)\to H_{1}(X, A)\to H_{0}(A)\xrightarrow{f_{\ast}} H_{0}(X)\to H_{0}(X, A)\to 0.$$
+
+If $H_{1}(X, A) = 0$ then $g_{\ast}$ is surjective and $f_{\ast}$ is injective. The latter implies that no two path-components of $A$ can go to the same path component of $X$. That is, each path component of $X$ contains at most one path-component of $A$.
+\medskip
+
+Conversely, if $g_{\ast}$ is surjective and each path-component of $X$ contains at most one path component of $A$, the latter meaning $f_{\ast}$ is injective, by the previous exercise (2.1.15) $H_{1}(X, A) = 0$. $\blacksquare$
 \bigskip
 \bigskip
 
