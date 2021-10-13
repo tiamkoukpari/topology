@@ -84,7 +84,7 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 
 1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29, 1.30, 1.31
 
-2.2, 2.5, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.27, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
+2.2, 2.5, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
 3.1, 3.2, 3.3, 3.4
 
@@ -611,6 +611,17 @@ $$\chi(X\times Y) = \sum_{n} (-1)^{n}c_{n}(X\times Y) = \sum_{n} \sum_{i+j=n} (-
 \medskip
 
 \textbf{Solution}. This follows from $c_{n}(X) = c_{n}(A) + c_{n}(B) - c_{n}(A\cap B)$ where $A\cap B$ is a subcomplex consisting of the cells of $X$ both in $A$ and $B$. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{27}. The short exact sequences $0\to C_{n}(A)\to C_{n}(X)\to C_{n}(X, A)\to 0$ always split, but why does this not always yield splittings $H_{n}(X)\approx H_{n}(A)\oplus H_{n}(X, A)$?
+\medskip
+
+\textbf{Solution}. While the chain level $C(A)\to C(X)$ is injective, the induced homology $H(A)\to H(X)$ is not necessarily injective. For example, taking $A = S^{1}$ and $X = \R^{2}$ so that at the homology level, we have
+
+$$H_{1}(A) = \Z \to H_{1}(X) = 0.$$
+
+In a similar way, $H(X)\to H(X, A)$ is not necessarily surjective.  $\blacksquare$
 \bigskip
 \bigskip
 
