@@ -82,9 +82,9 @@ B.1, B.2, B.3, B.4, B.5, B.6, B.7, B.8, B.9
 \textbf{Chapter 2}:
 \medskip
 
-1.2, 1.3, 1.6, 1.7, 1.8, 1.10, 1.12, 1.13, 1.14, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29
+1.2, 1.3, 1.6, 1.8, 1.10, 1.12, 1.13, 1.14, 1.17, 1.18, 1.20, 1.21, 1.22, 1.23, 1.24, 1.26, 1.27, 1.28, 1.29
 
-2.2, 2.5, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.19, 2.22 2.23, 2.24, 2.25, 2.26, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
+2.2, 2.5, 2.7, 2.8, 2.9, 2.10, 2.11, 2.12, 2.13, 2.14, 2.15, 2.16, 2.17, 2.18, 2.22 2.23, 2.24, 2.25, 2.26, 2.28, 2.29, 2.30, 2.31, 2.33, 2.35, 2.36, 2.38, 2.39, 2.40, 2.42, 2.43
 
 3.1, 3.2, 3.3, 3.4
 
@@ -436,6 +436,13 @@ Since $0\to A\xrightarrow{\alpha} B$ is exact iff $\ker \alpha = 0$, and the abo
 \bigskip
 \bigskip
 
+\textbf{12}. Show that chain homotopy of chain maps is an equivalence relation.
+\medskip
+
+\textbf{Solution}. $\blacksquare$
+\bigskip
+\bigskip
+
 \textbf{15}. For an exact sequence $A\to B\to C\to D\to E$ show that $C = 0$ iff the map $A\to B$ is surjective and $D\to E$ is injective. Hence for a pair of spaces $(X, A)$, the inclusion $A\hookrightarrow X$ induces isomorphisms on all homology groups iff $H_{n}(X, A) = 0$ for all $n$.
 \medskip
 
@@ -506,6 +513,13 @@ Since $A$ and $B$ are contractible, this becomes
 $$0\to \tilde{H}_{1}(X)\to \tilde{H}_{0}(A\cap B)\to  0$$
 
 so that $H_{1}(X) = \tilde{H}_{1}(X) = \tilde{H}_{0}(A\cap B) = \Z^{|\Q|-1} = \Z^{|\Q|}$. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{20}. Show that $\tilde{H}_{n}(X)\approx \tilde{H}_{n+1}(SX)$ for all $n$, where $SX$ is the suspension of $X$. More generally, thinking of $SX$ as the union of two cones $CX$ with their bases identified, compute the reduced homology groups of the union of any finite number of cones $CX$ with their bases identified.
+\medskip
+
+\textbf{Solution}. $\blacksquare$
 \bigskip
 \bigskip
 
@@ -638,6 +652,17 @@ References: \href{https://pages.uoregon.edu/njp/635hw4solutions.pdf}{1}.
 \medskip
 
 \textbf{Solution}. If $f:S^{n}\to S^{n}$ has fixed points, we are done. Otherwise, if $f$ has no fixed points, $\deg f = (-1)^{n+1}$. If $n$ is even, $\deg f = -1$ and by degree property (c) (Page 134) we can homotope $f$ to a reflection, which has fixed points. If $n$ is odd, $\deg f = 1$ and we can homotope $f$ to the identity, which fixes every point. $\blacksquare$
+\bigskip
+\bigskip
+
+\textbf{19}. Compute $H_{i}(\R P^{n}/\R P^{m})$ for $m < n$ by cellular homology, using the standard CW structure on $\R P^{n}$ with $\R P^{m}$ as its $m$-skeleton.
+\medskip
+
+\textbf{Solution}. $\R P^{n}$ has a CW complex structure of 1 $k$-cell $a_{k}$ for every $k = 0,\ldots, n$. So $\R P^{n}/\R P^{m}$ for $m < n$ has a CW complex structure with a 0-cell and 1 $k$-cell for every $k = m+1,\ldots, n$. The chain complex is
+
+$$0\to \Z\to \Z\to \cdots \to 0\to \cdots\to 0\to \Z\to 0.$$
+
+The degree of boundary operators on the CW complex of $\R P^{n}$ is $1 + (-1)^{k}$ in degree $k$. The degree is 0 when $k$ is odd and 2 when $k$ is even. And this will be the same on the above chain complex. For $k = 0$, we have $\ker d_{0}/\im d_{1} = \Z/0 = \Z$. For $0 < k\leq m$ we have $\ker d_{k}/\im d_{k+1} = 0/0 = 0$. For $m+1\leq k < n$, we have $\ker d_{k}/\im d_{k+1} = \Z/0 = \Z$ if $k+1$ is odd and $\Z/2\Z = \Z_{2}$ if $k+1$ is even. For $k = n$, we have $\ker d_{n}/\im d_{n+1} = \Z/0$ if $n$ is odd and $0/0 = 0$ if $n$ is even. $\blacksquare$
 \bigskip
 \bigskip
 
